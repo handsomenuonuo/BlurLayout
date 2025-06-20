@@ -10,8 +10,8 @@ import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
-import android.widget.FrameLayout
 import androidx.annotation.ColorInt
+import androidx.constraintlayout.widget.ConstraintLayout
 import org.hf.blurlayout.R
 import org.hf.blurlayout.blur.RenderEffectBlur
 import org.hf.blurlayout.blur.RenderScriptBlur
@@ -29,7 +29,7 @@ import org.hf.blurlayout.interfaces.IBlurViewFacade
  * Email: felix.huang@hansonggroup.com
  * Summary:
  **/
-class BlurLayout : FrameLayout {
+class BlurLayout : ConstraintLayout {
     val TAG: String = BlurLayout::class.java.simpleName
 
     private var blurController: IBlurController = NoOpController()
@@ -80,6 +80,7 @@ class BlurLayout : FrameLayout {
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
+        setupWith(parent as ViewGroup)
         if (!isHardwareAccelerated) {
             Log.e(TAG, "BlurView can't be used in not hardware-accelerated window!")
         } else {

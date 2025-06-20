@@ -14,9 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val root = findViewById<FrameLayout>(R.id.main)
-        val blurView = findViewById<BlurLayout>(R.id.blurLayout)
-
-        blurView.setupWith(root)
+//        val root = findViewById<FrameLayout>(R.id.main)
+//        val blurView = findViewById<BlurLayout>(R.id.blurLayout)
+//        blurView.setupWith(root)
     }
 }
