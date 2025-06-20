@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.hf.blurldemo.MainActivity">
+
+
+    <ImageView
+        android:src="@mipmap/ic_cloud_bg"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <org.hf.blurlayout.view.BlurLayout
+        android:layout_gravity="center"
+        android:id="@+id/blurLayout"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        app:blurOverlayColor="@color/colorOverlay"
+        android:background="#33ff00ff"
+        android:layout_height="80dp">
+
+    </org.hf.blurlayout.view.BlurLayout>
+
+</FrameLayout>
