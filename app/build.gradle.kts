@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "org.hf.blurldemo"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "org.hf.blurldemo"
